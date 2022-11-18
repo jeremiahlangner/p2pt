@@ -21,6 +21,7 @@
     "wrtc": "^0.4.7"
   },
   "devDependencies": {
+    "@types/debug": "^4.1.7",
     "@types/node": "^18.11.9",
     "@types/randombytes": "^2.0.0",
     "@types/simple-peer": "^9.11.5",
