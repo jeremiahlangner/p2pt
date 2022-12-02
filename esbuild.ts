@@ -21,6 +21,7 @@ build({
     'src/p2pt.ts'
   ],
   outfile: 'dist/p2pt.js',
+  platform: 'browser',
   format: 'esm',
   target: ['esnext'],
   minify: true,
