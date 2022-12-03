@@ -23,7 +23,6 @@ build({
   outfile: 'dist/p2pt.js',
   platform: 'browser',
   format: 'esm',
-  target: ['esnext'],
   minify: true,
   bundle: true,
   inject: [
