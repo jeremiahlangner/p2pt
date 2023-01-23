@@ -1,5 +1,6 @@
 import WebSocketTracker from 'bittorrent-tracker/lib/client/websocket-tracker';
-import randombytes from 'randombytes';
+import { randombytes } from './util/randombytes';
+import { toString, toBuffer } from './util/arraybuffer';
 import EventEmitter from 'events';
 import sha1 from 'simple-sha1';
 import { Instance } from 'simple-peer';
@@ -39,18 +40,16 @@ class P2PT extends EventEmitter {
   _identifier = '';
 
   infoHash: string;
-  _infoHashBuffer: Buffer;
+  _infoHashBuffer: ArrayBuffer;
   _infoHashBinary: string;
 
-  _peerIdBuffer: Buffer = randombytes(20);
-  _peerId: string = this._peerIdBuffer.toString('hex');
-  _peerIdBinary: string = this._peerIdBuffer.toString('binary');
+  _peerIdBuffer: ArrayBuffer = randombytes(20);
+  _peerId: string = toString(this._peerIdBuffer);
 
   set identifier(val: string) {
     this._identifier = val;
     this.infoHash = sha1.sync(val).toLowerCase();
-    this._infoHashBuffer = Buffer.from(this.infoHash, 'hex');
-    this._infoHashBinary = this._infoHashBuffer.toString('binary');
+    this._infoHashBuffer = toBuffer(this.infoHash);
   }
 
   constructor(
