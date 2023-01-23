@@ -15,7 +15,6 @@
   "dependencies": {
     "bittorrent-tracker": "^9.19.0",
     "process": "^0.11.10",
-    "randombytes": "^2.1.0",
     "simple-sha1": "^3.1.0"
   },
   "optionalDependencies": {
@@ -24,7 +23,6 @@
   "devDependencies": {
     "@types/debug": "^4.1.7",
     "@types/node": "^18.11.9",
-    "@types/randombytes": "^2.0.0",
     "@types/simple-peer": "^9.11.5",
     "@types/simple-sha1": "^3.0.0",
     "@types/tape": "^4.13.2",
@@ -58,10 +56,5 @@
   "bugs": {
     "url": "https://github.com/subins2000/p2pt/issues"
   },
-  "homepage": "https://github.com/subins2000/p2pt#readme",
-  "standard": {
-    "ignore": [
-      "dist"
-    ]
-  }
+  "homepage": "https://github.com/subins2000/p2pt#readme"
 }
