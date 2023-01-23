@@ -1,5 +1,4 @@
 /// <reference types="node" />
-/// <reference types="node" />
 import WebSocketTracker from 'bittorrent-tracker/lib/client/websocket-tracker';
 import EventEmitter from 'events';
 import { Instance } from 'simple-peer';
@@ -43,11 +42,10 @@ declare class P2PT extends EventEmitter {
     };
     _identifier: string;
     infoHash: string;
-    _infoHashBuffer: Buffer;
+    _infoHashBuffer: ArrayBuffer;
     _infoHashBinary: string;
-    _peerIdBuffer: Buffer;
+    _peerIdBuffer: ArrayBuffer;
     _peerId: string;
-    _peerIdBinary: string;
     set identifier(val: string);
     constructor(announce: string[], identifier: string);
     start(): void;
