@@ -1,3 +1,5 @@
+Fork + TypeScript rewrite of subins2000's p2pt
+
 # P2PT
 
 Simple library to establish P2P connections, communicate messages using WebTorrent Trackers (WebSocket) as the signalling server. Make any kind of WebRTC app using WebTorrent trackers as general-purpose WebRTC signalling servers.
