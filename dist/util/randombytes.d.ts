@@ -1,1 +1,1 @@
-export declare function randombytes(size: any): ArrayBuffer;
+export declare function randombytes(size: number): ArrayBuffer;

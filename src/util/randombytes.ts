@@ -1,9 +1,9 @@
-const MAX_BYTES = 65536;
-const MAX_UINT32 = 4294967295;
+const MAX_BYTES = 65536 as const;
+const MAX_UINT32 = 4294967295 as const;
 
 const crypto = global.crypto || global.msCrypto;
 
-export function randombytes(size) {
+export function randombytes(size: number): ArrayBuffer {
   if (size == 0) return;
   if (size > MAX_UINT32) throw new RangeError('Too many bytes requested');
 

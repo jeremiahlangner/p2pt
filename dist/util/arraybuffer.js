@@ -4,7 +4,7 @@ function toString(buf) {
 function toBuffer(str) {
     const buf = new ArrayBuffer(str.length * 2);
     const view = new Uint16Array(buf);
-    for (let i = 0; i < str.length; i++) {
+    for (let i = 0; i < str.length; ++i) {
         view[i] = str.charCodeAt(i);
     }
     return buf;
